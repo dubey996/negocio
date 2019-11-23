@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Usuario Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-menu side="start" menuId="custom" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <ion-item (click)="cerrarSesion()">Cerrar Sesión</ion-item>
+
+
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+
+
+  <section id="profile" class="container">
+    <div class="row mt-5">
+      <div class="col-lg-4 col-sm-6 col-12 text-center">
+        <div class="row">
+          <div class="col-12 profile-header"></div>
+        </div>
+        <div class="row user-details">
+          <div class="col-12">
+            <h5>{{user.name}}</h5>
+            <p>
+              {{user.email}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</ion-content>
